@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,30 +13,37 @@
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <title>Document</title>
 </head>
+
 <body>
     <div id="app">
         <div class="container">
-            <div class="row">
-                <div @click="prev" class="col-1">
+            <div class="row pt-5">
+                <div @click="prev" class="col-1 d-flex justify-content-center align-items-center">
                     <i class="fas fa-chevron-left"></i>
                 </div>
                 <div class="col-10">
                     <img :src="imgList[imgIndex]" alt="">
+                    <div class="slider-index d-flex justify-content-center">
+                        <i :class="rightDot(index)" v-for="(img,index) in imgList" @click="move(index)"
+                            class="fas fa-circle px-2">
+                        </i>
+                    </div>
                 </div>
-                <div @click="next" class="col-1">
+                <div @click="next" class="col-1 d-flex justify-content-center align-items-center">
                     <i class="fas fa-chevron-right"></i>
                 </div>
 
             </div>
 
         </div>
-        
+
     </div>
-    
+
 
 
 
 
     <script src="./js/scrypt.js"></script>
 </body>
+
 </html>

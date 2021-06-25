@@ -13,9 +13,9 @@ const app = new Vue(
             imgIndex: 0,
         },
         created() {
-            setInterval( () => {
+            setInterval(() => {
                 this.next();
-            },5000)
+            }, 5000)
         },
         methods: {
             next: function () {
@@ -36,6 +36,18 @@ const app = new Vue(
 
                 }
             },
+
+            move: function (index) {
+                this.imgIndex = index;
+            },
+
+            rightDot: function (index) {
+                if (index === this.imgIndex) {
+                    return 'text-primary';
+                } else {
+                    return ''
+                }
+            }
         }
     }
 
