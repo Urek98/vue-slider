@@ -22,10 +22,10 @@
                     <i class="fas fa-chevron-left"></i>
                 </div>
                 <div class="col-10">
-                    <img :src="imgList[imgIndex]" alt="">
+                    <img id="img-animation" :src="imgList[imgIndex]" alt="">
                     <div class="slider-index d-flex justify-content-center">
                         <i :class="rightDot(index)" v-for="(img,index) in imgList" @click="move(index)"
-                            class="fas fa-circle px-2">
+                            class="fas fa-dot-circle px-2 pt-2">
                         </i>
                     </div>
                 </div>

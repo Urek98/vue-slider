@@ -22,8 +22,11 @@ const app = new Vue(
 
                 if (this.imgIndex === (this.imgList.length - 1)) {
                     this.imgIndex = 0;
+                    document.getElementById('img-animation').style.opacity--;
+                    
                 } else {
                     this.imgIndex++;
+                    
                 }
             },
 
@@ -31,6 +34,7 @@ const app = new Vue(
 
                 if (this.imgIndex === 0) {
                     this.imgIndex = this.imgList.length - 1;
+                    document.getElementById('img-animation').style.opacity++;
                 } else {
                     this.imgIndex--;
 
@@ -43,7 +47,7 @@ const app = new Vue(
 
             rightDot: function (index) {
                 if (index === this.imgIndex) {
-                    return 'text-primary';
+                    return 'color-blue';
                 } else {
                     return ''
                 }

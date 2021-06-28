@@ -8,3 +8,22 @@
     font-size: 50px;
 }
 
+.col-1 .fas:hover{
+    font-size: 70px;
+    transition: font-size 1s;
+}
+
+.col-1 .fas:active{
+    font-size: 50px;
+    transition: font-size 0.3s;
+}
+
+.color-blue{
+   color: rgb(0,97,255);
+   transition: color 1s;
+}
+
+ #img-animation{
+    filter: opacity(1);
+    transition: all 2s;
+} 
